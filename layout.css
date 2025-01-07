@@ -132,8 +132,6 @@ dl {
   font-family: "Chivo", serif;
   gap: 10px;
   padding-bottom: var(--space-lg);
-  /* margin: 0;
-  padding: 0; */
 }
 
 dt {
@@ -181,8 +179,4 @@ dd {
     width: 75%;
     opacity: 10%;
   }
-
-  /* .bw {
-    max-width: 400px;
-  } */
 }
