@@ -1,0 +1,277 @@
+/**** variabler ****/
+:root {
+  /** farver **/
+  --primary: #1b1af5;
+  --secondary: #fffcd1;
+  --tertiary: #412722;
+  --accent1: #d8f4ff;
+  --accent2: #786eff;
+
+  /** spacing **/
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 6rem;
+  --space-xxxl: 10rem;
+}
+
+/**** fonte
+Hentet fra Google Fonts
+h1 og h2:
+font-family: "Italiana", serif;
+
+h3:
+font-family: "Chivo", serif;
+
+p:
+font-family: "Chivo Mono", serif;
+
+****/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto; /* aspect/ratio */
+  padding-bottom: var(--space-md);
+}
+
+html {
+  background-color: var(--secondary);
+}
+
+/** fonte **/
+
+h1 {
+  font-family: "Italiana", serif;
+  color: var(--primary);
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Italiana", serif;
+  color: var(--primary);
+  font-size: 2.5rem;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+h3 {
+  font-family: "Chivo", serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-xs);
+}
+
+h4 {
+  font-family: "Italiana", serif;
+  color: var(--accent2);
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+h5 {
+  font-family: "Chivo", serif;
+  color: var(--primary);
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Chivo Mono", serif;
+  padding-bottom: var(--space-xl);
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**** menu ****/
+header {
+  display: flex;
+  top: 0;
+  width: 90%; /** ellers ryger det sidste af menuen ud af skærmen **/
+  justify-content: space-between;
+  align-items: center; /** centrere **/
+  padding: 20px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 60px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  font-family: "Chivo Mono", serif;
+  font-size: 1.2rem;
+  color: var(--primary);
+  text-decoration: none;
+  /* text-align: end; */
+}
+
+.menu a:hover {
+  color: var(--accent2);
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 3000;
+}
+
+.burger .line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+}
+
+#aktiv {
+  color: var(--tertiary);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+
+  .burger.active .line:nth-child(1),
+  .burger.active .line:nth-child(2),
+  .burger.active .line:nth-child(3) {
+    background-color: white;
+  }
+
+  .burger.active .menu {
+    background-color: var(--primary);
+  }
+
+  nav.active .menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* sørger for at menuen fylder hele skærmen */
+    background-color: var(--primary);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: center; /* vertikal */
+    align-items: center; /* horisontal */
+    z-index: 2000;
+  }
+
+  nav.active .menu li {
+    margin-bottom: 30px;
+  }
+
+  nav.active .menu li:last-child {
+    margin-bottom: 0;
+  }
+  nav.active .menu a {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+}
+
+/**** footer ****/
+
+footer {
+  background-color: var(--tertiary);
+  padding: var(--space-xxl);
+  margin-top: var(--space-xxl);
+}
+
+footer p {
+  color: var(--secondary);
+  font-weight: lighter;
+  font-size: 0.8rem;
+  padding-bottom: var(--space-sm);
+}
+
+footer .logo img {
+  width: 100px;
+  height: 100px;
+  padding-top: var(--space-sm);
+}
+
+.ikon {
+  width: 30px;
+  height: 30px;
+}
+
+footer .grid_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  /**** fonte ****/
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  p {
+    max-width: 63ch;
+  }
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+  .grid_footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  footer {
+    justify-content: space-between;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+  footer .logo img {
+    width: 200px;
+    height: 200px;
+  }
+}

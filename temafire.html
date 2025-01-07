@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <title>Tema 4</title>
+</head>
+
+<body>
+    <div class="figur4"></div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="index.html#projekter">Projekter</a></li>
+                <li><a href="ommig.html">Om mig</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Tema 4 <br> Grundlæggende animation</h2>
+        <div class="grid_2">
+            <div>
+                <h3>Opgavebeskrivelse</h3>
+                <p>I fjerde tema skulle vi individuelt kode et simpelt spil ved hjælp af HTML, CSS og JavaScript.
+                    Spillet skulle indeholde faktorerne liv, point og tid, og derudover gode og dårlige elementer som
+                    brugeren kan klikke på. Til sidst skulle spillet indeholde en "level complete" og en "game over"
+                    side.</p>
+            </div>
+            <div class="knap">
+                <a href="https://xn--bjrk-hulten-hgb.dk/kea/04_animation/website">
+                    <h5>Se tema 4</h5>
+                </a>
+            </div>
+        </div>
+        <div class="grid_2">
+
+            <img src="images/tema4.webp" alt="tema4">
+
+            <div>
+                <h3>Rad Brad</h3>
+                <p>I mit spil var jeg meget inspireret af minimalistisk animation fra 90erne og 00erne, primært South
+                    Park. Spillet foregår på et bjerg hvor man skal hjælpe snowboarderen Rad Brad med at fange så mange
+                    "bluebirds" (slang for blå himmel) som muligt - minimum 10, for at sørge de perfekte vejrforhold.
+                    <br><br>
+                    For at undgå
+                    dårlig sne skal man undgå at klikke på de røde "slushice". Klikker man på tre "slushice" er der Game
+                    Over.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid_2">
+            <div>
+                <h3>Teknik</h3>
+                <p>I opbygningen af vores spil arbejdede vi med aktivitetsdiagram og statemachinediagram.
+                    Aktivitetsdiagrammet brugte vi til at beskrive flowet af handlinger i spillet. Mit aktivitetsdiagram
+                    visualiserer et meget simpelt spil, hvor gode og dårlige elementer falder ned. <br><br>
+                    Der kan ske tre ting: <br>
+                    Man kan nå til "Level Complete" ved at klikke på 10 (eller flere) "blue birds" inden tiden løber ud.
+                    <br>
+                    Klikker man på 3 "slushice" er der "Game Over". <br>
+                    Når man ikke at fange 10 "blue birds" inden tiden løber ud er der også "Game Over".
+                    <br><br>
+                    Statemachinediagrammet brugte jeg til at visualisere hvordan forskellige handlinger udløste
+                    forskellige tilstande i mit spil.
+                </p>
+                <h3>JavaScript</h3>
+                <p>I selve kodningen af spillet brugte vi JavaScript til at sætte animationer på de elementer vi havde
+                    illustreret. Jeg brugte id'erne "container" og "sprite" til at sætte mine illustrationer ind vha.
+                    background-image i mit css.</p>
+            </div>
+            <div>
+                <img src="images/aktivitet.webp" alt="aktivitetsdiagram">
+                <img src="images/statemachine.webp" alt="statemachinediagram">
+            </div>
+        </div>
+        <div class="grid_2">
+            <div>
+                <h3>Grafiske elementer</h3>
+                <p>I designprocessen brugte jeg Illustrator til at tegne alle mine spilelementer og andre grafiske
+                    elementer.
+                    <br>Her kan man se hvordan jeg fx løste timerfunktionen i mit spil. <br><br>Jeg illustrede tiden
+                    vha. en
+                    gondollift
+                    som bevæger sig fra venstre til højre henover skærmen. <br><br>
+                    Jeg valgte at bruge samme illustration i andre farver til at lave mit logoet til hjemmesiden.
+                </p>
+            </div>
+            <div class="grid_2">
+                <div>
+                    <p>Timeren i mit spil:</p>
+                    <img class="logoimg" src="images/gondol.svg" alt="spiltimer">
+                </div>
+                <div>
+                    <p>Mit logo til hjemmesiden:</p>
+                    <img class="logoimg" src="images/spillogo.svg" alt="spillogo">
+                </div>
+            </div>
+        </div>
+        <div class="grid_2">
+            <div>
+                <h3>Lydeffekter</h3>
+                <p>Spillet skulle også indeholde lydeffekter. Her brugte vi Adobe Audition til at redigere vores lyde.
+                </p>
+            </div>
+            <img src="images/lyde.webp" alt="lydeffekter">
+        </div>
+        <div class="boks2">
+            <div>
+                <h3>Konklusion</h3>
+                <p>Tema 4 gav mig en grundlæggende forståelse for hvordan man kan bruge JavaScript til at gøre sit
+                    website
+                    (eller spil i dette tilfælde) mere interaktivt og engagerende. <br><br> Mine evner indenfor
+                    illustrator
+                    udviklede sig også en del i løbet af dette forløb, og hvordan man bedste implementerer
+                    illustrationer fra
+                    Illustrator i sin kode.</p>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="knap">
+                <a href="temato.html">
+                    <h5>Tema 2</h5>
+                </a>
+            </div>
+            <div class="knap">
+                <a href="tematre.html">
+                    <h5>Tema 3</h5>
+                </a>
+            </div>
+            <div class="knap">
+                <a href="temafem.html">
+                    <h5>Tema 5.1</h5>
+                </a>
+            </div>
+            <div class="knap">
+                <a href="temafem.html#virksomhed">
+                    <h5>Tema 5.2</h5>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="grid_footer">
+            <div>
+                <p>KONTAKTOPLYSNINGER <br><br>Bjørk Hultén <br> Mail: bjhu0001@stud.kea.dk <br> Tlf.: 31 77 76 16
+                </p>
+                <div class="ikon"><a href="https://www.instagram.com/bjorkhulten/"><img src="images/insta.png"
+                            alt="instagram"></a>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
